@@ -40,9 +40,10 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="250dp"
-        android:capitalize="words"
+        android:capitalize="none"
         android:ems="10"
         android:inputType="textPersonName"
+        android:phoneNumber="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -55,7 +56,8 @@
         android:layout_marginTop="25dp"
         android:layout_marginEnd="250dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="phone"
+        android:phoneNumber="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,7 +68,7 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="250dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="30dp"
         android:ems="10"
         android:inputType="textPersonName"
@@ -89,6 +91,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
 
+    <EditText
+        android:id="@+id/editTextTextPersonName7"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="250dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName8"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="230dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="30dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
+
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
@@ -105,7 +135,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginTop="50dp"
-        android:text="Middle Name"
+        android:text="Phone Number"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -170,19 +200,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <EditText
-        android:id="@+id/editTextNumber"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="230dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="30dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
-
-    <EditText
         android:id="@+id/editTextDate"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
@@ -190,76 +207,64 @@
         android:layout_marginTop="25dp"
         android:layout_marginEnd="30dp"
         android:ems="10"
+        android:enabled="false"
+        android:allowClickWhenDisabled="true"
         android:hint="dd/mm/yyyy"
         android:inputType="date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
-
-    <EditText
-        android:id="@+id/editTextNumber2"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="250dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
-
-    <EditText
-        android:id="@+id/editTextNumber3"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="230dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="30dp"
-        android:clickable="false"
-        android:editable="false"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.865"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6" />
 
     <CheckedTextView
         android:id="@+id/checkedTextView"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="36dp"
         android:text="I have read and agreed to the Terms of Service of Equality Bank"
         app:layout_constraintStart_toEndOf="@+id/checkBox"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber2" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName8" />
 
     <CheckBox
         android:id="@+id/checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber2" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="240dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="28dp"
+        android:enabled="false"
         android:text="Create Account"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber3" />
+        app:layout_constraintTop_toBottomOf="@+id/checkedTextView" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="30dp"
         android:text="Clear"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber2" />
+        app:layout_constraintTop_toBottomOf="@+id/checkedTextView" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName6"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="230dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="30dp"
+        android:ems="10"
+        android:digits="0123456789."
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

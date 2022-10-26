@@ -1,38 +1,37 @@
 package com.example.bankaccount;
 
 public class Customer {
-    String fname;
-    String mname;
-    String lname;
+
+    String [] person1 = new String[3];
+
+//    person1[0] = new String (Fname);
+
+    String Fname;
+    String Lname;
+    String pnumber;
     int id;
     String gender;
     String dateOfBirth;
     int age;
     int accountNumber;
 
-    public Customer (String fname, String mname,String lname) {
-        this.fname = fname;
-        this.mname = mname;
-        this.lname = lname;
+//    public String getFname() {
+//        return Fname;
+//    }
+//
+//    public void setFname (String fname) {
+//        Fname = fname;
+//    }
+
+    public void customerDataNames (String firstName, String lastName, String phoneNumber) {
+        this.Fname = firstName;
+        this.Lname = lastName;
+        this.pnumber = phoneNumber;
     }
 
-    public void idNumber (int id_number) {
-        id = id_number;
-    }
+//    public void customerDataLastName () {
+//        this.Lname = lastName;
+//    }
 
-    public void customerGender (String customer_gender) {
-        gender = customer_gender;
-    }
 
-    public void customerDateOfBirth (String date_of_birth) {
-        dateOfBirth =date_of_birth;
-    }
-
-    public void customerAge (int customer_age) {
-        age = customer_age;
-    }
-
-    public void customerAccountNumber (int account_number) {
-        accountNumber = account_number;
-    }
 }
