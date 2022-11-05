@@ -39,11 +39,11 @@ public class MainActivity3 extends AppCompatActivity {
 
                 Integer id2 = Integer.parseInt(id);
 
-//                if(idNumber != id2) {
-//                    editTextTextPersonName9.setText(account);
-//                } else {
-//                    editTextTextPersonName9.setText("Wrong Id Number");
-//                }
+                if(id2 == idNumber) {
+                    editTextTextPersonName9.setText("account");
+                } else {
+                    editTextTextPersonName9.setText("Wrong Id Number");
+                }
 
 
 
