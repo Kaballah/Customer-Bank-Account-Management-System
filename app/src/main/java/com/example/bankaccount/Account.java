@@ -1,53 +1,35 @@
 package com.example.bankaccount;
 
+import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.Dialog;
-import android.content.Context;
-import android.view.Gravity;
-import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import java.util.zip.Inflater;
+public class Account extends Activity {
 
-public abstract class Account extends Context {
+    public void depositPrompt() {
+//        Toast.makeText(this, "Balance is below Ksh 1000. Kindly recharge your account", Toast.LENGTH_LONG).show();
 
-    public void AccountBalanceChecker(String accountNumber) {
-        Integer accNumber = Integer.parseInt(accountNumber);
+        AlertDialog.Builder builder = new AlertDialog.Builder(new Account());
+        builder.setTitle("Account balance is low ");
+        StringBuffer alert = new StringBuffer();
+        alert.append("\n\nYour account balance has hit below Ksh 1000. Kindly make a deposit soon to continue enjoying our services. ");
+        builder.setMessage(alert.toString());
+        builder.setCancelable(true);
 
-        if(accNumber < 1000) {
-
-        }
-
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 
-    public void AccountBalanceAdder(String accountNumber) {
-        Integer accNumber = Integer.parseInt(accountNumber);
+    public void AccountBalanceChecker(String accountBalance) {
 
-        StringBuffer alert = new StringBuffer();
-        alert.append("Thank you for creating an account with us. \n\n");
-        alert.append("We as Equality Bank are dedicated to keeping your account safe at all times. If you feel like you have an issue" +
-                "with your account, kindly contact our support team at +254 769 692 554 and they will respond to your issue. \n\n");
-        alert.append("Welcome to the eco-system of banking. \n" +
-                "Bank with the Best \n" +
-                "And for the best \n\n");
+        Integer account_balance = Integer.parseInt(accountBalance);
 
-                    /* Calling the alert dialog builder to create for us a new dialog box
-                    which will be displayed in this activity */
-        AlertDialog.Builder builder = new AlertDialog.Builder(Account.this);
+//        Account balanceChecker = new Account();
+//        balanceChecker.depositPrompt();
 
-        // Setting the cancelability to false/We can't cancel the dialog box
-        builder.setCancelable(false);
-
-        // Setting the title of the alert box
-        builder.setTitle("Account Created");
-
-        // Assigning the message to be displayed
-        builder.setMessage(alert.toString());
-
-        // Calling it to display
-        builder.show();
-
+        if (account_balance < 1000) {
+            Account balanceChecker = new Account();
+            balanceChecker.depositPrompt();
+        };
     }
 }
 

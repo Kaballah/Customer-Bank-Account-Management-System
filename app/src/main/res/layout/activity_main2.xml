@@ -118,7 +118,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="230dp"
             android:layout_marginTop="50dp"
-            android:text="10000.00"
+            android:text="10000"
             android:textColor="#000000"
             tools:layout_editor_absoluteX="273dp"
             tools:layout_editor_absoluteY="389dp" />
@@ -155,7 +155,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
         android:text="Send to Bank"
-        android:onClick="showAlertDialogButtonClicked"
+        android:onClick="sendToAnotherBank"
         app:layout_constraintStart_toEndOf="@+id/button3"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
@@ -166,6 +166,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
         android:text="Send to Mobile"
+        android:onClick="sendToMobileMoney"
         app:layout_constraintStart_toEndOf="@+id/button6"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
@@ -176,6 +177,7 @@
         android:layout_marginStart="23dp"
         android:layout_marginTop="30dp"
         android:text="Pay Your Bills"
+        android:onClick="sendToPaybill"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button3" />
 
@@ -186,6 +188,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
         android:text="Buy Goods"
+        android:onClick="sendToTillNumber"
         app:layout_constraintStart_toEndOf="@+id/button8"
         app:layout_constraintTop_toBottomOf="@+id/button6" />
 
@@ -196,8 +199,41 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
         android:text="Buy Airtime"
+        android:onClick="buyAirtime"
         app:layout_constraintStart_toEndOf="@+id/button9"
         app:layout_constraintTop_toBottomOf="@+id/button7" />
+
+    <Button
+        android:id="@+id/button14"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="30dp"
+        android:text="Withdraw"
+        android:onClick="withdrawFromAgent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button8" />
+
+    <Button
+        android:id="@+id/button15"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="Deposit"
+        android:onClick="depositToAccount"
+        app:layout_constraintStart_toEndOf="@+id/button14"
+        app:layout_constraintTop_toBottomOf="@+id/button9" />
+
+    <Button
+        android:id="@+id/button16"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="Mini Statements"
+        app:layout_constraintStart_toEndOf="@+id/button15"
+        app:layout_constraintTop_toBottomOf="@+id/button10" />
 
     <Button
         android:id="@+id/button11"
@@ -224,5 +260,13 @@
         android:text="Account"
         app:layout_constraintStart_toEndOf="@+id/button12"
         app:layout_constraintTop_toTopOf="parent" />
+
+<!--    <Chronometer-->
+<!--        android:id="@+id/cnm"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:format="Timer : %s"/>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
