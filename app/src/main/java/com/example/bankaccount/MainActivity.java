@@ -118,8 +118,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Toast.makeText(getApplicationContext(), "Please enter an ID number!", Toast.LENGTH_SHORT).show();
                 } else if(gender.isEmpty()) {
                     Toast.makeText(getApplicationContext(), "Please enter a gender!", Toast.LENGTH_SHORT).show();
-                //}  else if(dob.isEmpty()) {
-                    // Toast.makeText(getApplicationContext(), "Please enter your date of birth!", Toast.LENGTH_SHORT).show();
+                }  else if(dob.isEmpty()) {
+                    Toast.makeText(getApplicationContext(), "Please enter your date of birth!", Toast.LENGTH_SHORT).show();
                 } else if(age.isEmpty()) {
                     Toast.makeText(getApplicationContext(), "Please enter your age!", Toast.LENGTH_SHORT).show();
                 } else if(accountnumber.isEmpty()) {
